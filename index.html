@@ -3,226 +3,76 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>59/2023 Specialist Cadet Course Graduation Parade</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-      color: black;
-      font-size: 18px;
-      position: relative;
-      min-height: 100vh;
 
-      background-image: url("./images/background-transparent.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Specialist Cadet & Military Expert Course Graduation Parade</title>
+    <link rel="stylesheet" href="styles.css">
 
-    h1,
-    h2 {
-      text-align: center;
-      font-size: 2em;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-
-    select,
-    button {
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 30px;
-    }
-
-    button {
-      padding: 15px 30px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      font-size: 1.2em;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    #saveText {
-      display: none;
-    }
-
-    p {
-      text-align: center;
-      font-size: 1.2em;
-      /* color: white; */
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    select {
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 30px;
-      padding: 15px;
-      font-size: 1.2em;
-      border: 2px solid #007bff;
-      border-radius: 5px;
-      background-color: #fff;
-      appearance: none;
-    }
-
-    select:focus {
-      outline: none;
-      border-color: #0056b3;
-    }
-
-    /* #footer {
-      position: fixed;
-      text-align: center;
-      padding: 10px 0;
-      bottom: 0;
-      width: 100%;
-      font-size: 20px;
-      background-color: #fff;
-    } */
-
-    #swiLogo {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      height: 30vh;
-      width: auto;
-    }
-
-    #schoolLogo {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      height: 20vh;
-      width: auto;
-    }
-  </style>
 </head>
 
 <body>
-  <img src="./images/SWI.png" alt="SWI Logo" id="swiLogo">
-  <h1>Welcome to 59/2023 Specialist Cadet Course Graduation Parade</h1>
-  <div id="inputCarpark">
-    <p id="submitText">Please select your current carpark location</p>
-    <select id="schoolSelect">
-      <option value="" disabled selected>Please select</option>
-      <option value="A">Carpark A</option>
-      <option value="B">Carpark B</option>
-      <option value="C">Carpark C</option>
-      <option value="D">Carpark D</option>
-      <option value="E">Carpark E</option>
-      <option value="F">Carpark F</option>
-      <option value="G">Carpark G</option>
-      <option value="H">Carpark H</option>
-      <option value="I">Carpark I</option>
-      <option value="J">Carpark J</option>
-      <option value="K">Carpark K</option>
-      <option value="L">Carpark L</option>
-      <option value="M">Carpark M</option>
-      <option value="N">Carpark N</option>
-      <option value="O">Carpark O</option>
-      <option value="P">Carpark P</option>
-      <option value="V">Carpark V</option>
-    </select>  
-    <button onclick="storeValue()">Submit</button>
-  </div>
+    <img src="./images/SWI.png" alt="SWI Logo" id="swiLogo">
 
-  <p id="saveText">Your data has been saved.</p>
-  <!-- <button onclick="retrieveValue()" id="retrieveBtn" class="toHide">Carpark Location</button> -->
-  <div id="findCarpark">
-    <div id="displayValue"></div>
-    <button id="reset" onclick="reset()">Reset</button>
-  </div>
-  <hr>
+    <background-image: url("./images/background-transparent.png")>
+    
+    <h1> Welcome to Specialist Cadet & Military Expert Course Graduation Parade</h1>
+    <div id="inputCarpark">
+        <!-- <p id="submitText"> select your current carpark location</p> -->
+        <div class="display">
+            <div class="select-container">
+                <select id="schoolSelect" onchange="storeValue()">
+                    <option id="defaultOption" value="" disabled selected>Find Carpark Location</option>
+                    <option value="A">Carpark A</option>
+                    <option value="A1">Carpark A1</option>
+                    <option value="B1">Carpark B1</option>
+                    <option value="B2">Carpark B2</option>
+                    <option value="C">Carpark C</option>
+                    <option value="D">Carpark D</option>
+                    <option value="G">Carpark G</option>
+                    <option value="E">Carpark E</option>
+                    <option value="F">Carpark F</option>
+                    <option value="H">Carpark H</option>
+                    <option value="I">Carpark I</option>
+                    <option value="J">Carpark J</option>
+                    <option value="K">Carpark K</option>
+                    <option value="L">Carpark L</option>
+                    <option value="M">Carpark M</option>
+                    <option value="N">Carpark N</option>
+                    <option value="O">Carpark O</option>
+                    <option value="P">Carpark P</option>
+                    <option value="V">Carpark V</option>
+                    <option value="Q">Carpark Q</option>
+                </select>
+            </div>
+            <button id="info-button" onclick="alert(Select your current carpark location to get directions to the parade location)">i</button>
+        </div>
+        
+        <!-- <div class="display">
+            <div class="text-center">
+                <a href="cadets.html" id="warriorContingentButton">Find Graduand's Contingent</a>
+            </div>
+            <button id="info-button" onclick="alert(Search for your graduand's unit, contingent, and recommended seating sector)">i</button>
+        </div> -->
+    </div>
 
-  <div id="footer">
-    <img src="./images/school.png" alt="School III Logo" id="schoolLogo">
-    <p>Created by PTE Yuhang, SCS III Mohicans Company.</p>
-  </div>
+    <!-- <p id="saveText">Your data has been saved.</p> -->
+    <div id="findCarpark">
+        <div id="displayValue"></div>
+        <!-- <button id="reset" onclick="reset()">Reset</button> -->
+        <div class="nav-link-2" onclick="reset()" id="red-back-button">
+            <a href="/">
+                <img width="20" height="20" src="https://www.svgrepo.com/show/346526/arrow-go-back.svg" alt="Back" style="filter: brightness(0) invert(1);">
+            </a>
+        </div>
+    </div>
+    <hr>
 
-  <script>
-    carparkLocations = {
-      "A": "https://maps.app.goo.gl/hR1j2HNkM6bVwJQ79",
-      "B": "https://maps.app.goo.gl/iKfdvLgP3hjXRZst9",
-      "C": "https://maps.app.goo.gl/53WnZzXvPTSVVqYV7",
-      "D": "https://maps.app.goo.gl/7isWaMsfq75ryqBE8",
-      "E": "https://maps.app.goo.gl/tKBMbK5Ts729tNTe9",
-      "F": "https://maps.app.goo.gl/5B8SnyYsgafgNALq5",
-      "G": "https://maps.app.goo.gl/3CTwAY3LS9s8keKm9",
-      "H": "https://maps.app.goo.gl/gv5ofmMGL34fvaQi8",
-      "I": "https://maps.app.goo.gl/6Wf6tFiVZgBkCuws7",
-      "J": "https://maps.app.goo.gl/UhDYiN62gth8AyZG9",
-      "K": "https://maps.app.goo.gl/ZkRwnXUmtLqVThDT6",
-      "L": "https://maps.app.goo.gl/rPAi19gpM3eGnpGs7",
-      "M": "https://maps.app.goo.gl/tYWvWk4GiGznM7HQ7",
-      "N": "https://maps.app.goo.gl/GPC16ZNpeu4gvig86",
-      "O": "https://maps.app.goo.gl/q6id7kKqMuwvdnYFA",
-      "P": "https://maps.app.goo.gl/8g2VYWhPnHhKdXC96?g_st=ic",
-      "V": "https://maps.app.goo.gl/3k13Jx4FNwK9u5uJ9?g_st=ic",
-      "Leaders Square": "https://maps.app.goo.gl/meTyGciHWCcQJFpP9?g_st=iw"
-    }
-    window.onload = function() {
-      var storedSchool = localStorage.getItem('storedSchool');
-      if (storedSchool) {
-        document.getElementById('schoolSelect').value = storedSchool;
-        document.querySelector('#inputCarpark').style.display = "none";
-      } else {
-        document.querySelector('#findCarpark').style.display = "none";
-      }
-      retrieveValue();
-    };
-    function storeValue() {
-      var selectedSchool = document.getElementById('schoolSelect').value;
-      if (selectedSchool === '') {
-        alert('Please select a school!');
-        return;
-      }
-      localStorage.setItem('storedSchool', selectedSchool);
-      alert('School stored successfully!');
-      document.querySelector('#saveText').style.display = "block";
-      document.querySelector('#inputCarpark').style.display = "none";
-      document.querySelector("#findCarpark").style.display = "block";
-      retrieveValue();
-    }
+    
 
-    function retrieveValue() {
-      var storedSchool = localStorage.getItem('storedSchool');
-      if (storedSchool && carparkLocations.hasOwnProperty(storedSchool)) {
-        var carpark_link = carparkLocations[storedSchool];
-        var leadersSquare = carparkLocations["Leaders Square"];
-        document.getElementById('displayValue').innerHTML = `<p>Carpark ${storedSchool}: <a href=${carpark_link}>View Carpark Location</a></p><p><a href=${leadersSquare}>Specialist Cadet Course Graduation Parade Square Location</a></p>`;
-        document.getElementById('displayValue').style.display = 'block';
-      } else {
-        document.getElementById('displayValue').innerHTML = '<p>No school stored yet.</p>';
-      }
-    }
-    function reset() {
-      localStorage.removeItem('storedSchool');
-      location.reload();
-    }
-  </script>
+  
+
+    <script src="script.js"></script>
 </body>
 
 </html>
